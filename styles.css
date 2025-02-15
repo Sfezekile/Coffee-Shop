@@ -1,0 +1,530 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #FAF3E0; /* Warm White */
+    color: #2B1B0F; /* Dark Espresso */
+}
+
+/* Header & Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: #4B2E1A; /* Deep Brown */
+    color: #EED9C4; /* Soft Beige */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+    display: inline-block;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0.625rem;
+}
+
+nav ul li a:hover {
+    color: #D4AF37; /* Gold */
+}
+
+nav .right a {
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0.625rem;
+    display: flex;
+}
+
+nav .right a:hover {
+    color: var(--link-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.right-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    filter: blur(4px);
+}
+.right-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Hero Section */
+
+.hero {
+    height: 100vh;
+    background: url('Img/AI\ Images\ \(4k\)\ -\ Freepik\ \(160324079539\).jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #C78A50; /* Rich Caramel */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #D4AF37; /* Gold */
+}
+
+/* About Section */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background: #EED9C4; /* Soft Beige */
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+/* Coffee Section */
+#coffee-section {
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 2rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+#coffee-section h2 {
+    margin-bottom: 1rem;
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+#coffee-section h3 {
+    margin-bottom: 1rem;
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+.coffee-subsection {
+    width: 100%;
+    margin-bottom: -150px; /* Add space between subsections */
+}
+
+.projects-scroll-container {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 1600px;
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    margin: 0 auto;
+}
+
+.project-box {
+    flex: 0 0 16rem; /* Fixed width for the boxes */
+    text-align: center;
+    border: 1px solid #f7ccd5;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling */
+}
+
+.project-box:hover {
+    transform: scale(0.95); /* Grow the box slightly on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-box img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.project-box h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.project-box h5 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.project-box p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #494a4a;
+}
+
+/* Food Section */
+#food-section {
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8rem 2rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+#food-section h2 {
+    margin-bottom: 1rem;
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+#food-section h3 {
+    margin-bottom: 1rem;
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+.food-subsection {
+    width: 100%;
+    margin-bottom: -150px; /* Add space between subsections */
+}
+
+.projects-scroll-container {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 1600px;
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    margin: 0 auto;
+}
+
+.project-box {
+    flex: 0 0 16rem; /* Fixed width for the boxes */
+    text-align: center;
+    border: 1px solid #f7ccd5;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling */
+}
+
+.project-box:hover {
+    transform: scale(0.95); /* Grow the box slightly on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-box img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.project-box h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.project-box h5 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.project-box p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #494a4a;
+}
+
+/* March Section */
+#march-section {
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8rem 2rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+#march-section h2 {
+    margin-bottom: 1rem;
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+#march-section h3 {
+    margin-bottom: 1rem;
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+.march-subsection {
+    width: 100%;
+    margin-bottom: -200px; /* Add space between subsections */
+}
+
+.projects-scroll-container {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 1600px;
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    margin: 0 auto;
+}
+
+.project-box {
+    flex: 0 0 16rem; /* Fixed width for the boxes */
+    text-align: center;
+    border: 1px solid #f7ccd5;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling */
+}
+
+.project-box:hover {
+    transform: scale(0.95); /* Grow the box slightly on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-box img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.project-box h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.project-box h5 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.project-box p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #494a4a;
+}
+
+/* Speecial Section */
+#special-section {
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8rem 2rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+#special-section h2 {
+    margin-bottom: 1rem;
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+#special-section h3 {
+    margin-bottom: 1rem;
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+.special-subsection {
+    width: 100%;
+    margin-bottom: -150px; /* Add space between subsections */
+}
+
+.projects-scroll-container {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 1600px;
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    margin: 0 auto;
+}
+
+.project-box {
+    flex: 0 0 16rem; /* Fixed width for the boxes */
+    text-align: center;
+    border: 1px solid #f7ccd5;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling */
+}
+
+.project-box:hover {
+    transform: scale(0.95); /* Grow the box slightly on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-box img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.project-box h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.project-box h5 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.project-box p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #494a4a;
+}
+
+/* Cards Swiper */
+.swiper {
+    width: 100%;
+    overflow-x: scroll !important;
+  }
+
+.swiper-slide {
+    width: 272px !important;
+    height: 375.75px;
+}
+
+.swiper-slide > a {
+    display: block;
+    transform: scale(0.9);
+    width: 272px;
+    height: 375.75px;
+}
+
+/* Swiper Styles for All Devices */
+.swiper {
+    width: 100%;
+    overflow-x: scroll !important;
+}
+
+.swiper-slide {
+    width: 272px !important;
+    height: 375.75px;
+}
+
+.swiper-slide > a {
+    display: block;
+    transform: scale(0.9);
+    width: 272px;
+    height: 375.75px;
+}
+
+/* Swiper Styles for Larger Devices */
+@media screen and (min-width: 768px) {
+    .swiper {
+        width: 100%;
+        overflow-x: scroll !important;
+    }
+    .swiper-slide {
+        width: 272px !important;
+        height: 375.75px;
+    }
+
+    .swiper-slide > a {
+        display: block;
+        transform: scale(0.9);
+        width: 272px;
+        height: 375.75px;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #4B2E1A; /* Deep Brown */
+    color: #EED9C4;
+    margin-top: 20px;
+}
