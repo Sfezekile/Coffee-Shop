@@ -1,0 +1,54 @@
+/* Header & Navigation */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #4B2E1A; /* Deep Brown */
+  color: #EED9C4; /* Soft Beige */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  
+  gap: 20px;
+  background-color: #4B2E1A;
+  padding: 15px;
+}
+
+nav a {
+  color: #e7dfdd;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #d4a373; /* Warm caramel color */
+  transition: all 0.3s ease;
+}
+
+.order-btn {
+  background-color: #d4a373;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.order-btn:hover {
+  background-color: #b86b45;
+}
