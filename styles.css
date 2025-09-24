@@ -1,84 +1,119 @@
-/* Google Font */
+/* =============================================
+   COFFEE SHOP STYLESHEET DOCUMENTATION
+   Author: Coffee Shop Team
+   Version: 1.0
+   Date: 2025
+   Description: Main stylesheet for Coffee Shop website
+   ============================================= */
+
+/* =============================================
+   GOOGLE FONTS IMPORT
+   ============================================= */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400&display=swap');
 
-/* Global Styles */
+/* =============================================
+   GLOBAL STYLES AND CSS RESET
+   ============================================= */
+
+/* Reset default browser styles for consistency */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box; /* Include padding and border in element's total width/height */
+    font-family: 'Poppins', sans-serif; /* Set default font */
 }
 
+/* Body styles - sets the overall page background and text color */
 body {
-    background-color: #FAF3E0; /* Warm White */
-    color: #2B1B0F; /* Dark Espresso */
+    background-color: #FAF3E0; /* Warm White background for cozy feel */
+    color: #2B1B0F; /* Dark Espresso text color for readability */
 }
 
-/* Hero Section */
+/* =============================================
+   HERO SECTION STYLES
+   Main banner section with background image
+   ============================================= */
 .hero {
-    height: 100vh;
+    height: 100vh; /* Full viewport height */
     background: url('Img/AI\ Images\ \(4k\)\ -\ Freepik\ \(160324079539\).jpg') no-repeat center center/cover;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
     text-align: center;
     color: white;
     padding: 20px;
 }
 
+/* Hero section heading */
 .hero-text h1 {
     font-size: 3rem;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', serif; /* Elegant serif font for headings */
 }
 
+/* Hero section paragraph */
 .hero-text p {
     font-size: 1.2rem;
-    margin: 10px 0;
+    margin: 10px 0; /* Vertical spacing */
 }
 
+/* =============================================
+   BUTTON STYLES
+   Reusable button component
+   ============================================= */
 .btn {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 20px;
-    background: #C78A50; /* Rich Caramel */
+    background: #C78A50; /* Rich Caramel color */
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    transition: background 0.3s ease; /* Smooth color transition */
 }
 
+/* Button hover state */
 .btn:hover {
-    background: #D4AF37; /* Gold */
+    background: #D4AF37; /* Gold color on hover */
 }
 
-/* About Section */
+/* =============================================
+   ABOUT SECTION STYLES
+   Company information section
+   ============================================= */
 .about {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 50px 20px;
-    background: #EED9C4; /* Soft Beige */
+    background: #EED9C4; /* Soft Beige background */
 }
 
 .about-text {
-    max-width: 600px;
+    max-width: 600px; /* Limit text width for better readability */
 }
 
-/* Coffee Section */
+/* =============================================
+   PRODUCT SECTION STYLES
+   Styles for Coffee, Food, Merchandise and Special sections
+   ============================================= */
+
+/* Common styles for all product sections */
 #coffee-section,
 #food-section,
 #march-section,
 #special-section {
-    min-height: 50vh;
+    min-height: 50vh; /* Minimum section height */
     flex-direction: column;
     justify-content: center;
-    padding: 8rem 2rem;
+    padding: 8rem 2rem; /* Ample padding for spacing */
     display: flex;
     align-items: center;
     text-align: center;
-    gap: 0.5rem;
+    gap: 0.5rem; /* Space between elements */
 }
 
+/* Section headings */
 #coffee-section h2,
 #coffee-section h3,
 #food-section h2,
@@ -92,52 +127,51 @@ body {
     font-weight: 700;
 }
 
+/* Subsection containers */
 .coffee-subsection,
 .food-subsection,
 .march-subsection,
 .special-subsection {
     width: 100%;
-    margin-bottom: -150px; /* Add space between subsections */
+    margin-bottom: -150px; /* Negative margin for overlapping effect */
 }
 
+/* Specific spacing for merchandise section */
 .march-subsection {
-    margin-bottom: -200px; /* Add space between subsections */
+    margin-bottom: -200px; /* Extra space for merchandise section */
 }
 
-.projects-scroll-container {
-    display: flex;
-    gap: 1.5rem;
-    padding: 1rem;
-    width: 100%;
-    max-width: 1600px;
-    overflow-x: auto; /* Allow horizontal scrolling if needed */
-    margin: 0 auto;
-}
-
+/* =============================================
+   PROJECT BOX STYLES
+   Individual product/item containers
+   ============================================= */
 .project-box {
-    flex: 0 0 16rem; /* Fixed width for the boxes */
+    flex: 0 0 16rem; /* Fixed width, no grow/shrink */
     text-align: center;
     border: 1px solid #f7ccd5;
     border-radius: 0.5rem;
     padding: 1rem;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
 }
 
+/* Hover effects for project boxes */
 .project-box:hover {
-    transform: scale(0.95); /* Grow the box slightly on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(0.95); /* Slight scale down on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
+/* Project box images */
 .project-box img {
     width: 100%;
     height: 12rem;
-    object-fit: cover;
+    object-fit: cover; /* Maintain aspect ratio while filling container */
     border-radius: 0.25rem;
     margin-bottom: 0.75rem;
 }
 
+/* Project box headings */
 .project-box h4 {
     margin-bottom: 0.5rem;
     font-size: 1.25rem;
@@ -149,31 +183,43 @@ body {
     font-weight: 500;
 }
 
+/* Project box descriptions */
 .project-box p {
     font-size: 1rem;
     font-weight: 300;
-    color: #494a4a;
+    color: #494a4a; /* Subtle gray for descriptions */
 }
 
-/* Swiper Styles for All Devices */
+/* =============================================
+   SWIPER CAROUSEL STYLES
+   Styles for the product carousels
+   ============================================= */
+
+/* Base swiper container */
 .swiper {
     width: 100%;
-    overflow-x: scroll !important;
+    overflow-x: scroll !important; /* Horizontal scrolling */
 }
 
+/* Individual swiper slides */
 .swiper-slide {
     width: 272px !important;
     height: 375.75px;
 }
 
+/* Links within swiper slides */
 .swiper-slide > a {
     display: block;
-    transform: scale(0.9);
+    transform: scale(0.9); /* Slightly scaled for visual effect */
     width: 272px;
     height: 375.75px;
 }
 
-/* Swiper Styles for Larger Devices */
+/* =============================================
+   MEDIA QUERIES - RESPONSIVE DESIGN
+   ============================================= */
+
+/* Styles for tablets and larger devices (768px and up) */
 @media screen and (min-width: 768px) {
     .swiper {
         width: 100%;
@@ -192,32 +238,106 @@ body {
     }
 }
 
-/* Footer */
+/* =============================================
+   FOOTER STYLES
+   ============================================= */
 footer {
     text-align: center;
     padding: 20px;
-    background: #4B2E1A; /* Deep Brown */
-    color: #EED9C4;
+    background: #4B2E1A; /* Deep Brown background */
+    color: #EED9C4; /* Soft Beige text */
     margin-top: 20px;
 }
 
-/* For Firefox */
+/* =============================================
+   CUSTOM SCROLLBAR STYLES
+   Enhanced scrollbar for better UX
+   ============================================= */
+
+/* Firefox scrollbar customization */
 body {
     scrollbar-width: thin;
-    scrollbar-color: #E8DCC5 #FAF3E0; /* Lighter thumb & same background */
+    scrollbar-color: #E8DCC5 #FAF3E0; /* Thumb color and track color */
 }
 
-/* For Chrome, Edge, and Safari */
+/* Webkit browsers (Chrome, Edge, Safari) scrollbar */
 ::-webkit-scrollbar {
-    width: 6px; /* Very thin */
+    width: 6px; /* Thin scrollbar */
 }
 
 ::-webkit-scrollbar-track {
-    background: #FAF3E0; /* Same as page */
+    background: #FAF3E0; /* Match page background */
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #E8DCC5; /* Soft beige (low contrast) */
+    background: #E8DCC5; /* Soft beige thumb */
     border-radius: 10px;
+}
+
+/* =============================================
+   HEADER AND NAVIGATION STYLES
+   ============================================= */
+
+/* Main header container */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #4B2E1A; /* Deep Brown */
+  color: #EED9C4; /* Soft Beige */
+  position: fixed; /* Fixed positioning for sticky header */
+  width: 100%;
+  top: 0;
+  z-index: 1000; /* Ensure header stays above other content */
+}
+
+/* Logo styling */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Navigation container */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between navigation items */
+  background-color: #4B2E1A;
+  padding: 15px;
+}
+
+/* Navigation links */
+nav a {
+  color: #e7dfdd;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Navigation link hover state */
+nav a:hover {
+  color: #d4a373; /* Warm caramel color on hover */
+}
+
+/* =============================================
+   ORDER BUTTON STYLES
+   Specific styles for the order button
+   ============================================= */
+.order-btn {
+  background-color: #d4a373;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Order button hover state */
+.order-btn:hover {
+  background-color: #b86b45; /* Darker shade on hover */
 }
